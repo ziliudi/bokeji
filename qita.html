@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>博客集</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+         body {
+                background-color: rgb(225,218,202);
+                color: black;
+            }
+          h2 {
+    color: black;
+}
+          
+
+            .link-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .link-row a {
+                width: 25%;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+             /* 添加以下代码 */
+        #header .logo {
+            font-size: 1.5em;
+            color: black;
+        }
+        #header nav li a {
+            font-size: 1.5em;
+            color: black;
+        }
+        </style>
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/ziliudi/img@main/bokejilogo2.jpeg">
+    </head>
+    <body class="is-preload">
+
+        <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="title">自留地</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">主页</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Main -->
+                    <section id="main" class="wrapper">
+                        <h2 class="wp-block-heading has-text-align-left">精选博客</h2>
+
+                        <div class="wp-block-buttons">
+                            <div class="wp-block-buttons is-horizontal is-content-justification-space-between is-layout-flex wp-container-9 wp-block-buttons-is-layout-flex" style="font-style:normal;font-weight:400">
+                                <div class="link-row">
+                                <a href="https://www.ntiy.com/" target="_blank">非理勿试</a>
+    <a href="https://wuse.ink/" target="_blank">无色墨水</a>
+    <a href="https://www.yayu.net/" target="_blank">雅余</a>
+    <a href="https://blog.7wate.com/" target="_blank">救赎之路</a>
+    <a href="https://onojyun.com/" target="_blank">莫比乌斯</a>
+    
+    
+    <a href="https://elizen.me/" target="_blank">Elizen</a>
+    
+    
+    <a href="http://stuit.cn/" target="_blank">风雨行者</a>
+    
+    <a href="http://life.wellwellsleep.com/" target="_blank">一盘家常菜</a>
+    
+    <a href="https://www.vergilisme.com/" target="_blank">八咫乌</a>
+    <a href="https://darmau.design/" target="_blank">李大猫</a>
+    <a href="http://yipai.me" target="_blank">一派胡言</a>
+    <a href="https://www.guhub.cn/blog" target="_blank">Isla</a>
+    <a href="http://utopia.pursuitus.com/" target="_blank">Ouroboros</a>
+    <a href="https://cynal.blog" target="_blank">Cynal</a>
+    <a href="https://blog.shuiba.co/archive" target="_blank">水八口</a>
+</div>
+<h2 class="wp-block-heading has-text-align-left">中文博客导航</h2>
+
+
+
+<div class="wp-block-buttons is-content-justification-space-between is-layout-flex wp-container-10 wp-block-buttons-is-layout-flex">
+<div class="link-row">
+                                
+    <a href="https://www.foreverblog.cn/" target="_blank">十年之约</a>
+    <a href="http://www.jetli.com.cn/" target="_blank">博客志</a>
+    <a href="https://storeweb.cn/" target="_blank">个站商店</a>
+    <a href="https://bf.zzxworld.com/" target="_blank">BlogFinder</a>
+    <a href="https://boke.lu/" target="_blank">博客录</a>
+    <a href="https://firewood.news/" target="_blank">积薪</a>
+    
+
+							
+					</section>
+
+			</div>
+
+		
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+<script>
+// 允许访问的地区
+const allowedLocations = ['云南', '香港', '新加坡', '日本'];
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+  // 获取客户端IP地址
+  const ip = request.headers.get('CF-Connecting-IP');
+  // 获取IP地址对应的地理位置信息
+  const response = await fetch(`http://ip.taobao.com/service/getIpInfo.php?ip=${ip}`);
+  const data = await response.json();
+  
+
+  // 检查地理位置是否在允许访问的地区内
+  if (data && allowedLocations.includes(data.regionName)) {
+    // 允许访问
+    return new Response('欢迎访问我们的网站！', { status: 200 });
+  } else {
+    // 拒绝访问
+    return new Response('抱歉，您所在的地区无法访问我们的网站。', { status: 403 });
+  }
+}
+
+</script>
+	</body>
+	<p id="time"></p>
+
+<!-- Footer -->
+			
+			<footer class="wp-block-template-part">
+    <script type="text/javascript">
+        <!-- Begin
+        copyright=new Date();//取得当前日期
+        update=copyright.getFullYear();//取得当前年份
+        document.write("Copyright © 2023-"+ update + " <a href='https://ziliudi.now.cc/'>ziliudi</a>版权所有.");//update 自动更新的年份
+        //  End -->
+    </script>
+    <div class="synopsis"><!--站点运行时间开始--> 
+  <div class="zmki_footer_mar">
+            
+                                                           <font color="">本站已经稳定运行：</font><SPAN id=span_dt_dt style="color: #2F889A;"></SPAN> 
+                                      <script language=javascript>function show_date_time(){
+     window.setTimeout("show_date_time()", 1000);
+     BirthDay=new Date("07/09/2023 01:13:14 ");
+    today=new Date();
+     timeold=(today.getTime()-BirthDay.getTime());
+         sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                    msPerDay=24*60*60*1000
+            e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+    hrsold=Math.floor(e_hrsold);
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=Math.floor((e_hrsold-hrsold)*60);
+    seconds=Math.floor((e_minsold-minsold)*60);
+ span_dt_dt.innerHTML='<font style=color:＃00BFFF>'+daysold+'</font> 天 <font style=color:＃00BFFF>'+hrsold+'</font> 时 <font style=color:＃00BFFF>'+minsold+'</font> 分 <font style=color:＃00BFFF>'+seconds+'</font> 秒';
+     }show_date_time();</script> 
+<!--站点运行时间结束-->
+</div>
+</footer>
+
+			
+</html>
